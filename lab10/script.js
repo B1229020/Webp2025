@@ -10,9 +10,9 @@ function getimg() {
     if (data.stat === "ok") {
       var photoArray = data.photos.photo;
       photoArray.forEach(function(photo) {
-        var img_Url = 'https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=ca370d51a054836007519a00ff4ce59e&photo_id=53608779187&format=json&nojsoncallback=1';
-        fetchImageSize(img_Url);
-      });
+  var img_Url = `https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=ca370d51a054836007519a00ff4ce59e&photo_id=${photo.id}&format=json&nojsoncallback=1`;
+  fetchImageSize(img_Url);
+});
     }
   }
 }
